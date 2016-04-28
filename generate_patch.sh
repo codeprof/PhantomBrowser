@@ -3,11 +3,6 @@
 #firefox_path=/home/benutzer/Downloads/mozilla-release
 read -p "Enter path to mozilla-release (e.g. /home/benutzer/Downloads/mozilla-release): " firefox_path
 
-cd "generate blacklist"
-./hosts_download_02_09_15
-cp safesearch_ignore.h ../safesearch_ignore.h
-cp badhosts.h ../badhosts.h
-cd ..
 cd $firefox_path
 
 cp $firefox_path/nsprpub/pr/src/misc/prnetdb.c $firefox_path/nsprpub/pr/src/misc/prnetdb_org.c

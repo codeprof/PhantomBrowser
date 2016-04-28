@@ -8,6 +8,13 @@ read -p "Enter path to mozilla-release (e.g. /home/benutzer/Downloads/mozilla-re
 echo "Make sure badhosts.h is up to date!"
 echo "Adapt paths in mozconfig-mobile!"
 
+cd "generate blacklist"
+./hosts_download_02_09_15
+cp safesearch_ignore.h ../safesearch_ignore.h
+cp badhosts.h ../badhosts.h
+cd ..
+cd $firefox_path
+
 #now we compile both (Desktop is default)
 cp mozconfig-desktop $firefox_path/mozconfig
 cp mozconfig-desktop $firefox_path/mozconfig-desktop
