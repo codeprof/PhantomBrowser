@@ -1,0 +1,16 @@
+--- /home/benutzer/Downloads/mozilla-release/browser/base/content/browser.xul	2015-01-23 06:59:54.000000000 +0100
++++ /home/benutzer/Downloads/mozilla-release/browser/base/content/browser_new.xul	2015-02-10 14:20:08.155926159 +0100
+@@ -464,6 +464,13 @@
+         <button id="identity-popup-help-icon"
+                oncommand="gIdentityHandler.handleHelpCommand(event);"
+                tooltiptext="&identity.help.tooltip;"/>
++               
++               <!-- //EDIT:-->
++        <button id="7875"
++               oncommand="gIdentityHandler.handleHelpCommand(event);"
++               tooltiptext="&identity.help.tooltip;">Disable</button>     
++                <!-- //EDIT:--> 
++                
+         <spacer flex="1"/>
+         <button id="identity-popup-more-info-button"
+                 label="&identity.moreInfoLinkText;"

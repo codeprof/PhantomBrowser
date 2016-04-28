@@ -1,0 +1,6 @@
+0.0.0.0 *.safebrowsing-cache.google.com
+
+0.0.0.0 safebrowsing-cache.google.com
+0.0.0.0 safebrowsing.google.com
+
+ 

@@ -1,0 +1,42 @@
+--- /home/benutzer/Downloads/ff/mozilla-release/mobile/android/base/AndroidManifest_org.xml.in	2015-08-26 11:39:06.000000000 +0200
++++ /home/benutzer/Downloads/ff/mozilla-release/mobile/android/base/AndroidManifest.xml.in	2015-09-02 17:22:45.793776953 +0200
+@@ -25,7 +25,9 @@
+ 
+     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
++<!-- EDIT:
+     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
++-->
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+     <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+@@ -49,8 +51,10 @@
+     <uses-permission android:name="android.permission.READ_SMS"/>
+ #endif
+ 
++<!-- EDIT:
+     <uses-feature android:name="android.hardware.location" android:required="false"/>
+     <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
++-->
+     <uses-feature android:name="android.hardware.touchscreen"/>
+ 
+ #ifdef NIGHTLY_BUILD
+@@ -72,14 +76,18 @@
+ #endif
+ 
+ #ifdef MOZ_WEBRTC
++<!-- EDIT:
+     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+     <uses-feature android:name="android.hardware.audio.low_latency" android:required="false"/>
+     <uses-feature android:name="android.hardware.camera.any" android:required="false"/>
+     <uses-feature android:name="android.hardware.microphone" android:required="false"/>
++-->
+ #endif
++<!-- EDIT:
+     <uses-permission android:name="android.permission.CAMERA" />
+     <uses-feature android:name="android.hardware.camera" android:required="false"/>
+     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
++-->
+ 
+     <!-- App requires OpenGL ES 2.0 -->
+     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
