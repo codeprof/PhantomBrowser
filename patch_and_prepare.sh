@@ -13,7 +13,6 @@ cd "generate blacklist"
 cp safesearch_ignore.h ../safesearch_ignore.h
 cp badhosts.h ../badhosts.h
 cd ..
-cd $firefox_path
 
 #now we compile both (Desktop is default)
 cp mozconfig-desktop $firefox_path/mozconfig
