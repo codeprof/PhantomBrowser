@@ -19,7 +19,9 @@ cp $firefox_path/dom/base/nsGlobalWindow.cpp $firefox_path/dom/base/nsGlobalWind
 cp $firefox_path/dom/base/nsScreen.h $firefox_path/dom/base/nsScreen_org.h
 cp $firefox_path/dom/base/Navigator.cpp $firefox_path/dom/base/Navigator_org.cpp
 cp $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService.cpp $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService_org.cpp
-cp $firefox_path/mobile/android/base/AndroidManifest.xml.in $firefox_path/mobile/android/base/AndroidManifest_org.xml.in
+#cp $firefox_path/mobile/android/base/AndroidManifest.xml.in $firefox_path/mobile/android/base/AndroidManifest_org.xml.in
+cp $firefox_path/mobile/android/base/FennecManifest_permissions.xml.in $firefox_path/mobile/android/base/FennecManifest_permissions_org.xml.in
+
 
 echo Now modify files in $firefox_path
 sed -n q </dev/tty
@@ -38,5 +40,6 @@ diff -rupN $firefox_path/dom/base/nsGlobalWindow_org.cpp $firefox_path/dom/base/
 diff -rupN $firefox_path/dom/base/nsScreen_org.h $firefox_path/dom/base/nsScreen.h > patch_nsScreen.h
 diff -rupN $firefox_path/dom/base/Navigator_org.cpp $firefox_path/dom/base/Navigator.cpp > patch_Navigator.cpp
 diff -rupN $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService_org.cpp $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService.cpp > patch_nsUrlClassifierDBService.cpp
-diff -rupN $firefox_path/mobile/android/base/AndroidManifest_org.xml.in $firefox_path/mobile/android/base/AndroidManifest.xml.in > patch_AndroidManifest.xml.in
+#diff -rupN $firefox_path/mobile/android/base/AndroidManifest_org.xml.in $firefox_path/mobile/android/base/AndroidManifest.xml.in > patch_AndroidManifest.xml.in
+diff -rupN $firefox_path/mobile/android/base/FennecManifest_permissions_org.xml.in $firefox_path/mobile/android/base/FennecManifest_permissions.xml.in > patch_FennecManifest_permissions.xml.in
 
