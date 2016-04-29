@@ -41,7 +41,9 @@ cp $firefox_path/dom/base/nsScreen.h $firefox_path/dom/base/nsScreen_org.h
 cp $firefox_path/dom/base/Navigator.cpp $firefox_path/dom/base/Navigator_org.cpp
 #disabled for now because of strange problems. Problem since ff 42 (or a bit earlier)
 #cp $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService.cpp $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService_org.cpp
-cp $firefox_path/mobile/android/base/AndroidManifest.xml.in $firefox_path/mobile/android/base/AndroidManifest_org.xml.in
+
+#cp $firefox_path/mobile/android/base/AndroidManifest.xml.in $firefox_path/mobile/android/base/AndroidManifest_org.xml.in
+cp $firefox_path/mobile/android/base/FennecManifest_permissions.xml.in $firefox_path/mobile/android/base/FennecManifest_permissions_org.xml.in
 
 echo Patching files
 patch $firefox_path/nsprpub/pr/src/misc/prnetdb.c < patch_prnetdb.c $options
@@ -60,7 +62,9 @@ patch $firefox_path/dom/base/nsScreen.h < patch_nsScreen.h $options
 patch $firefox_path/dom/base/Navigator.cpp < patch_Navigator.cpp $options
 #disabled for now because of strange problems. Problem since ff 42 (or a bit earlier)
 #patch $firefox_path/toolkit/components/url-classifier/nsUrlClassifierDBService.cpp < patch_nsUrlClassifierDBService.cpp $options 
-patch $firefox_path/mobile/android/base/AndroidManifest.xml.in < patch_AndroidManifest.xml.in $options
+
+#patch $firefox_path/mobile/android/base/AndroidManifest.xml.in < patch_AndroidManifest.xml.in $options
+patch $firefox_path/mobile/android/base/FennecManifest_permissions.xml.in < patch_FennecManifest_permissions.xml.in $options
 
 echo Adapt default configs
 echo "pref(\"own.autosetDefaults\", true);" >> $firefox_path/browser/app/profile/firefox.js
