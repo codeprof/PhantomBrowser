@@ -9,22 +9,24 @@ ac_add_options --with-android-sdk="$HOME/.mozbuild/android-sdk-linux"
 ac_add_options --with-android-ndk="$HOME/.mozbuild/android-ndk-r10e"
 
 
-ac_add_options --disable-gstreamer
+#ac_add_options --disable-gstreamer
 ac_add_options --disable-wmf
-ac_add_options --disable-ffmpeg
+#ac_add_options --disable-ffmpeg
+#ac_add_options --disable-eme
+#ac_add_options --disable-fmp4
 ac_add_options --disable-crashreporter
 ac_add_options --disable-libjpeg-turbo
 #ac_add_options --disable-webrtc
-#ac_add_options --disable-webgl
+ac_add_options --disable-webgl
 ac_add_options --enable-release
 ac_add_options --disable-debug
 ac_add_options --with-app-name=phantom
 ac_add_options --with-app-basename=phantom
 ac_add_options --disable-tests
 ac_add_options --enable-optimize
-ac_add_options --enable-official-branding
+#ac_add_options --enable-official-branding
 
-ac_add_options --disable-javaxpcom
+#ac_add_options --disable-javaxpcom
 ##ac_add_options --disable-gnomevfs
 #ac_add_options --disable-gconf
 ac_add_options --disable-updater 
